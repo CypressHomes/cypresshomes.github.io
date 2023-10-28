@@ -1,5 +1,5 @@
 var backgroundIndex = 0;
-var fadeSpeed = 500;
+var fadeSpeed = 5000;
 var files = ['file1.jpg', 'file2.jpg', 'file3.jpg', 'file4.jpg'];
 
 function chg_image() {
@@ -11,11 +11,20 @@ function chg_image() {
 }
 
 function Lights_On() {
-    $('.bg-image').css('opacity', '1');
+    var x = 0;
+    while (x < 1) {
+        x += 0.01;
+        $('.bg-image').css('opacity', x);
+    }
+
 }
 
 function Lights_Off() {
-    $('.bg-image').css('opacity', '0');
+    var x = 1;
+    while (x > 0) {
+        x -= 0.01;
+        $('.bg-image').css('opacity', x);
+    }
 }
 
 // Fade from black to the next image
