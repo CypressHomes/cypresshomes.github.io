@@ -163,7 +163,7 @@ section {
   position: relative;
 }
 
-.bgimage {
+.bg-image {
   background-image: url(./background/file4.jpg);
   background-attachment: scroll;
   background-position: 50% 50%;
