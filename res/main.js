@@ -1,5 +1,5 @@
 var files = ['file1.jpg', 'file2.jpg', 'file3.jpg', 'file4.jpg'],
-base = "/res/background/",
+base = "./background/",
 backgroundIndex = 0,
 secs = 4;
 files.forEach(function(img){
