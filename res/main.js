@@ -10,7 +10,7 @@ function backgroundSequence() {
 	window.clearTimeout();
 	for (i = 0; i < files.length; i++) {
 		setTimeout(function(){ 
-            $('bg-image').css('background-image', 'url(' +  base + files[backgroundIndex] + ") no-repeat center center fixed"); 
+            $('bg-image').css('background-image', 'url(' +  base + files[backgroundIndex] + ")"); 
             $('bg-image').css('background-size', 'cover');
 		if ((backgroundIndex + 1) === files.length) { setTimeout(function() { backgroundSequence()}, (secs * 1000))} else { backgroundIndex++; }			
 		}, (secs * 1000) * i)	
