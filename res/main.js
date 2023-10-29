@@ -15,6 +15,7 @@ function Lights_On() {
     while (x < 1) {
         x += 0.01;
         $('.bg-image').css('opacity', x);
+        setTimeout(5);
     }
 
 }
@@ -24,6 +25,7 @@ function Lights_Off() {
     while (x > 0) {
         x -= 0.01;
         $('.bg-image').css('opacity', x);
+        setTimeout(5);
     }
 }
 
