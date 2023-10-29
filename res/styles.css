@@ -166,10 +166,11 @@ section {
 .bg-image {
   background-image: url(https://raw.githubusercontent.com/CypressHomes/cypresshomes.github.io/main/res/background/file4.jpg);
   background-attachment: scroll;
-  background-position: 50% 50%;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
+  background-blend-mode: darken;
   opacity: .69;
   
 }
@@ -197,9 +198,26 @@ h1 {
 }
 
 .user-signup__msg {
+    resize: none;
     font-size: 14px;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+in.form-control__input:invalid {
+  border: 2px dashed red;
+}
+
+.form-control__input:valid {
+  border: 2px solid lime;
+}
+
+textarea:invalid {
+  border: 2px dashed red;
+}
+
+textarea:valid {
+  border: 2px solid lime;
 }
 
 .user-signup__submit:hover {
