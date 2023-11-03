@@ -29,16 +29,6 @@ section {
   position: relative;
 }
 
-.bg-image {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  z-index: 0;
-}
-
 .form-horizontal .form-group {
   margin-right: 0;
   margin-left: 0;
@@ -164,15 +154,17 @@ section {
 }
 
 .bg-image {
-  background-image: url(https://raw.githubusercontent.com/CypressHomes/cypresshomes.github.io/main/res/background/file4.jpg);
-  background-attachment: scroll;
+  background-image: url(https://github-production-user-asset-6210df.s3.amazonaws.com/43596236/280371493-8be7f321-bd4f-472b-ab2e-d6d0acc49ac3.jpg);
+  position: fixed;
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-size: cover;
   background-blend-mode: darken;
   opacity: .69;
-  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 h1 {

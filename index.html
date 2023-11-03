@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Cypress Homes</title>
     <meta name="description" content="A landing page for Cypress Homes. Cypress homes is a family owned construction business." property="description">
-    <meta name="keywords" content="landing page, free, product page, startup, github, template, boilerplate" property="keywords">
+    <meta name="keywords" content="business, family, family-owned, careers, job, experience, carpentry, construction, rental, homes, tennessee" property="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1" property="viewport">
     <meta name="og:title" content="Cypress Homes" property="og:title">
     <meta name="og:description" content="A landing page for Cypress Homes. Cypress homes is a family owned construction business." property="og:description">
@@ -28,23 +28,25 @@
                                       <p style="text-align: center;">
                                           <img src="./res/spacer.png" alt="" class="spacer insert--image wrap-off-align-center"><br>
                                       </p>
-                                      <p style="text-align: center;">A Family owned business centered around hard work.</p>
+                                      <p style="text-align: center;">A Family owned business serving middle Tennessee.</p>
                                       <p style="text-align: center;">
                                           <img src="./res/clean-hr.png" alt="" class="clean-hr insert--image wrap-off-align-center">
-                                          <span style="font-size: 14px;">We are currently hiring, tell us a little about yourself below:</span>
+                                          <span style="font-size: 18px;">We are currently hiring, tell us a little about yourself below:</span>
                                       </p>
                                   </div>
                               </div>
                               <div class="row">
-                                  <form class="form form-horizontal user-signup__form" name="form" novalidate="" action="//###//" method="POST">
+                                  <form class="form form-horizontal user-signup__form" name="contact-form" action="http://formspree.io/f/mdorjgqq" method="POST">
                                       <div class="mt-table--full">
                                           <div class="mt-td--centered-vertical user-signup__col-1">
                                               <div class="user-signup__form-group m-lg-v form-group col-sm-12">
-                                                  <input type="email" name="EMAIL" class="form-control form-control__input user-signup__email" placeholder="Email" aria-required="true" required="required">
+                                                  <input type="text" name="name" class="form-control form-control__input user-signup__email" placeholder="Name" aria-required="true" required="required">
                                                   <br>
-                                                  <textarea placeholder="Message" rows="10" cols="50" minlength="25" maxlength="1000" name="message-content" class="form-control form-control__input user-signup__msg" aria-required="true" required="required"></textarea>
+                                                  <input type="email" name="_replyto" class="form-control form-control__input user-signup__email" placeholder="Email" aria-required="true" required="required">
                                                   <br>
-                                                  <button type="submit" class="btn btn-default submit user-signup__submit"><span>SUBMIT</span></button>
+                                                  <textarea name="body" rows="10" cols="50" minlength="25" maxlength="1000" class="form-control form-control__input user-signup__msg" placeholder="Message" aria-required="true" required="required"></textarea>
+                                                  <br>
+                                                  <button type="submit" name="submit" class="btn btn-default submit user-signup__submit" value="Send"><span>SUBMIT</span></button>
                                               </div>
                                           </div>
                                       </div>
@@ -56,7 +58,15 @@
               </section>
           </div>
       </div>
-      <a href=""><img style="position: absolute; top: 0; right: 0; border: 0;">/</a>
+
+      <script language="JavaScript">
+        var frmvalidator  = new Validator("contact-form");
+        frmvalidator.addValidation("name","req","Please provide your Name.");
+        frmvalidator.addValidation("_replyto","req","Please provide your Email.");
+        frmvalidator.addValidation("_replyto","_replyto","Please enter a valid email address");
+        frmvalidator.addValidation("message-content","req","Please provide a messsage describing your work or experience.")
+      </script>
+      <!-- <a href=""><img style="position: absolute; top: 0; right: 0; border: 0;">/</a> -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="./res/main.js"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLLSFXF0FV"></script>
@@ -64,7 +74,6 @@
           window.dataLayer = window.dataLayer || [];
           function gtag() { dataLayer.push(arguments); }
           gtag('js', new Date());
-
           gtag('config', 'G-QLLSFXF0FV');
       </script>
   </body>
